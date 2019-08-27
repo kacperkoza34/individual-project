@@ -1,0 +1,25 @@
+@import '../variables';
+
+.sidebar-ul{
+  padding: 0;
+}
+.sidebar-li{
+  margin: 10px 0 10px 0;
+  padding: 0 0 0 10px;
+  color: white;
+  background: $sidebar-background;
+  list-style: none;
+  height: 35px;
+  line-height: 35px;
+  font-family: $brand-font;
+  color: $sidebar-font-color;
+}
+.sidebar-li:hover{
+  border-left: 3px solid orange;
+  padding: 0 0 0 7px;
+  background: $li-hover;
+  color: RGBA(255, 255, 255, 0.8);
+}
+.sidebar-li span{
+  margin-right: 10px;
+}
