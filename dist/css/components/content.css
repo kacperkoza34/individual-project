@@ -1,0 +1,34 @@
+.content {
+  margin: 80px 20px;
+  background: white;
+}
+
+.article {
+  width: 100%;
+}
+
+.article:last-child {
+  padding-bottom: 50px;
+}
+
+.article::after {
+  display: flex;
+  content: '';
+  width: 100%;
+  height: 1px;
+  background: grey;
+}
+
+.element-title {
+  padding: 10px;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.element {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=content.css.map */

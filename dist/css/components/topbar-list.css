@@ -2,26 +2,29 @@
 /* Font sizes */
 /* Fonts */
 .topbar-ul {
-  margin: 0 0 0 200px;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row-reverse;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: RGBA(0, 0, 0, 0.7);
 }
 
 .topbar-li {
   padding: 0 20px 0 20px;
-  color: RGBA(0, 0, 0, 0.5);
+  color: RGBA(0, 0, 0, 0.7);
   list-style: none;
   height: 60px;
   line-height: 60px;
   font-family: "Abel", sans-serif;
   border-left-style: solid;
   border-left-width: 1px;
-  border-left-color: RGBA(0, 0, 0, 0.5);
+  border-left-color: RGBA(0, 0, 0, 0.7);
 }
 
 .topbar-li:hover {
-  color: RGBA(0, 0, 0, 0.8);
+  color: RGBA(0, 0, 0, 0.95);
 }
 
 .topbar-li span {

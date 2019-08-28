@@ -1,11 +1,13 @@
 @import '../variables';
 
 .sidebar-ul{
-  padding: 0;
+  padding: 0 0 40px 0;
+  border-bottom: 1px solid;
+  border-color: $sidebar-font-color;
 }
 .sidebar-li{
   margin: 10px 0 10px 0;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 18px;
   color: white;
   background: $sidebar-background;
   list-style: none;
@@ -15,11 +17,11 @@
   color: $sidebar-font-color;
 }
 .sidebar-li:hover{
-  border-left: 3px solid orange;
-  padding: 0 0 0 7px;
+  border-left: 4px solid orange;
+  padding: 0 0 0 14px;
   background: $li-hover;
   color: RGBA(255, 255, 255, 0.8);
 }
 .sidebar-li span{
-  margin-right: 10px;
+  margin-right: 20px;
 }

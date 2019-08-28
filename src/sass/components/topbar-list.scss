@@ -1,10 +1,13 @@
 @import '../variables';
 
 .topbar-ul{
-  margin: 0 0 0 200px;
+  margin: 0;
   padding: 0;
   display: flex;
   flex-direction: row-reverse;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: $topbar-font-color;
 }
 .topbar-li{
   padding: 0 20px 0 20px;
@@ -17,8 +20,9 @@
   border-left-width: 1px;
   border-left-color: $topbar-font-color;
 }
+
 .topbar-li:hover{
-  color: RGBA(0, 0, 0, 0.8);
+  color: $topbar-font-hover;
 }
 .topbar-li span{
   margin: 0 8px 0 8px;
