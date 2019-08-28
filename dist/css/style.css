@@ -433,6 +433,7 @@ body {
   padding: 0 0 0 14px;
   background: RGB(50, 50, 50);
   color: RGBA(255, 255, 255, 0.8);
+  cursor: pointer;
 }
 
 .sidebar-li span {
@@ -588,6 +589,7 @@ body {
   -ms-flex-align: center;
       align-items: center;
   padding: 10px;
+  margin: 15px;
   background: orange;
   border-radius: 10px;
   color: white;
@@ -616,7 +618,7 @@ body {
 
 input, textarea {
   width: 300px;
-  padding: 10px;
+  padding: 5px;
   margin: 10px 0 10px 0;
 }
 
@@ -640,13 +642,48 @@ input, textarea {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  height: 60px;
-  line-height: 40px;
+  height: 45px;
+  line-height: 26px;
   width: 500px;
 }
 
 .personal-data-form li span {
+  margin: 10px 0 10px 0;
   font-weight: 700;
+}
+
+/* Colors */
+/* Font sizes */
+/* Fonts */
+.double-form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  padding: 20px;
+}
+
+.form-box {
+  display: -ms-flexbox;
+  display: flex;
+  height: 45px;
+  border: 1px solid;
+  border-color: RGBA(0, 0, 0, 0.7);
+}
+
+.form-box input {
+  border-width: 0;
+  border-style: none;
+  height: 43px;
+  width: 130px;
+  margin: 0;
+}
+
+.form-box input:first-child {
+  border-right: 1px solid;
+  border-color: RGBA(0, 0, 0, 0.7);
 }
 
 /* Sections */

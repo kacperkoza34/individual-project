@@ -24,6 +24,7 @@
   padding: 0 0 0 14px;
   background: RGB(50, 50, 50);
   color: RGBA(255, 255, 255, 0.8);
+  cursor: pointer;
 }
 
 .sidebar-li span {
