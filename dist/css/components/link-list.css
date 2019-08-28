@@ -3,7 +3,7 @@
 /* Fonts */
 .link-list {
   display: flex;
-  height: 600px;
+  justify-content: center;
 }
 
 .link-list ul {
@@ -21,6 +21,15 @@
   width: 600px;
 }
 
+.link-list li:hover {
+  background: RGBA(0, 0, 0, 0.1);
+}
+
+.link-list li:last-child {
+  border-bottom: 0.5px solid;
+  border-color: RGBA(0, 0, 0, 0.7);
+}
+
 .link-icons i {
   margin: 0 7px 0 7px;
 }
@@ -35,11 +44,11 @@
 }
 
 .link-list .fa-trash-alt:hover {
-  color: red;
+  color: #000;
 }
 
 .link-list .fa-copy:hover {
-  color: orange;
+  color: #000;
 }
 
 /*# sourceMappingURL=link-list.css.map */

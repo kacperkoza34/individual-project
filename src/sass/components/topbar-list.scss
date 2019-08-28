@@ -23,6 +23,8 @@
 
 .topbar-li:hover{
   color: $topbar-font-hover;
+  background: $topbar-hover-backgr;
+  cursor: pointer;
 }
 .topbar-li span{
   margin: 0 8px 0 8px;

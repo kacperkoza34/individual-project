@@ -25,6 +25,8 @@
 
 .topbar-li:hover {
   color: RGBA(0, 0, 0, 0.95);
+  background: RGBA(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .topbar-li span {

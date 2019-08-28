@@ -1,0 +1,25 @@
+@import '../variables';
+
+.personal-data-form{
+  display: flex;
+  //height: 600px;
+  justify-content: center;
+}
+
+.personal-data-form ul{
+  padding: 0;
+  list-style: none;
+
+}
+
+.personal-data-form li{
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  line-height: 40px;
+  width: 500px;
+}
+
+.personal-data-form li span{
+  font-weight: 700;
+}

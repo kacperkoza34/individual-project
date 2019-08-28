@@ -1,0 +1,25 @@
+/* Colors */
+/* Font sizes */
+/* Fonts */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: orange;
+  border-radius: 10px;
+  color: white;
+}
+
+.button:hover {
+  background: orange;
+  color: RGBA(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=button.css.map */

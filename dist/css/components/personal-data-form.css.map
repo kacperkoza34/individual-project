@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "personal-data-form.css",
+	"sources": [
+		"../../../src/sass/components/personal-data-form.scss",
+		"../../../src/sass/_variables.scss"
+	],
+	"names": [],
+	"mappings": "ACAA,YAAY;AAYZ,gBAAgB;AAGhB,WAAW;ADbX,AAAA,mBAAmB,CAAA;EACjB,OAAO,EAAE,IAAI;EAEb,eAAe,EAAE,MAAM;CACxB;;AAED,AAAA,mBAAmB,CAAC,EAAE,CAAA;EACpB,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,IAAI;CAEjB;;AAED,AAAA,mBAAmB,CAAC,EAAE,CAAA;EACpB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,MAAM,EAAE,IAAI;EACZ,WAAW,EAAE,IAAI;EACjB,KAAK,EAAE,KAAK;CACb;;AAED,AAAA,mBAAmB,CAAC,EAAE,CAAC,IAAI,CAAA;EACzB,WAAW,EAAE,GAAG;CACjB"
+}
