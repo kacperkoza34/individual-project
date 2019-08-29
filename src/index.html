@@ -10,81 +10,76 @@
     <!--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
   </head>
   <body>
-    <section class="main-container">
+    <main class="main-container">
 
-      <!-- SIDEBAR -->
+      <aside class="side-bar">
 
-      <div class="side-bar">
+        <header class="sidebar-header">
+          <h3>Just do it!</h3>
+        </header>
 
-        <!-- HEADER -->
+        <nav>
+          <ul class="sidebar-ul">
+            <li class="sidebar-li"><span class="fas fa-align-justify"></span>sekcja</li>
+            <li class="sidebar-li"><span class="fas fa-align-justify"></span>wybor</li>
+            <li class="sidebar-li"><span class="fas fa-align-justify"></span>opcja</li>
+            <li class="sidebar-li"><span class="fas fa-align-justify"></span>HTML-CSS-JS</li>
+            <li class="sidebar-li"><span class="fas fa-align-justify"></span>Element</li>
+            <li class="sidebar-li"><span class="fas fa-align-justify"></span>Click</li>
+            <li class="sidebar-li"><span class="fas fa-align-justify"></span>Last</li>
+          </ul>
+        </nav>
 
-        <div class="sidebar-header">
-          Just do it!
-          <!--<span class="fas fa-align-justify"></span>-->
-        </div>
-
-        <!-- SIDE BAR NAV -->
-
-        <ul class="sidebar-ul">
-          <li class="sidebar-li"><span class="fas fa-align-justify"></span>sekcja</li>
-          <li class="sidebar-li"><span class="fas fa-align-justify"></span>wybor</li>
-          <li class="sidebar-li"><span class="fas fa-align-justify"></span>opcja</li>
-          <li class="sidebar-li"><span class="fas fa-align-justify"></span>HTML-CSS-JS</li>
-          <li class="sidebar-li"><span class="fas fa-align-justify"></span>Element</li>
-          <li class="sidebar-li"><span class="fas fa-align-justify"></span>Click</li>
-          <li class="sidebar-li"><span class="fas fa-align-justify"></span>Last</li>
-        </ul>
-
-        <div class="chat">
-          Your Menager
+        <section class="chat">
+          <header>
+            <h3>Your Menager</h3>
+          </header>
           <ul class="chat-list">
             <li>
               <span class="fas fa-user"></span>
               <span>Jan Kowalski</span>
             </li>
           </ul>
-        </div>
+        </section>
 
-        <ul class="sidebar-ul display-top-bar">
-          <li class="sidebar-li"><span class="fas fa-sign-out-alt"></span><span>Exit</span></li>
-          <li class="sidebar-li"><span class="fas fa-user"></span><span>Leonardo Dicaprio</span></li>
-          <li class="sidebar-li"><span class="fas fa-bell"></span>Alert</li>
-          <li class="sidebar-li"><span class="fas fa-wallet"></span><span>1000.00.00$</span></span></li>
-        </ul>
+        <section>
+          <ul class="sidebar-ul display-top-bar">
+            <li class="sidebar-li"><span class="fas fa-sign-out-alt"></span><span>Exit</span></li>
+            <li class="sidebar-li"><span class="fas fa-user"></span><span>Leonardo Dicaprio</span></li>
+            <li class="sidebar-li"><span class="fas fa-bell"></span>Alert</li>
+            <li class="sidebar-li"><span class="fas fa-wallet"></span><span>1000.00.00$</span></li>
+          </ul>
+        </section>
 
-
-
-
-
-      </div>
+      </aside>
 
       <!-- TOPBAR -->
 
-      <div class="top-bar">
+      <side class="side-container">
 
         <!-- TOPBAR NAV -->
 
-        <div class="nav">
+        <nav class="top-bar-nav">
           <ul class="topbar-ul">
             <li class="topbar-li"><span class="fas fa-sign-out-alt"></span></li>
             <li class="topbar-li"><span class="fas fa-user"></span><span>Leonardo Dicaprio</span></li>
             <li class="topbar-li"><span class="fas fa-bell"></span></li>
             <li class="topbar-li"><span class="fas fa-wallet"></span><span>1000.00.00$</span><span class="fas fa-sort-down"></span></li>
           </ul>
-        </div>
+        </nav>
 
 
           <section class="content">
 
-            <div class="article title">
-                Chart
-            </div>
+            <header class="article title">
+                <h3>Chart</h3>
+            </header>
 
             <div class="article element">
               <div class="wrapper-flex">
                 <div class="form-box">
-                  <input  type="text" class="name" placeholder="Start date">
-                  <input  type="text" class="name" placeholder="End date">
+                  <input  type="date" class="name">
+                  <input  type="date" class="name">
                 </div>
                 <div class="button">
                   <span class="fas fa-sync-alt"></span>
@@ -129,9 +124,9 @@
 
           <section class="content">
 
-            <div class="article title">
-                Title
-            </div>
+            <header class="article title">
+                <h3>Chart</h3>
+            </header>
 
             <div class="article element">
               <div class="wrapper-flex">
@@ -160,9 +155,10 @@
           </section>
 
           <section class="content">
-            <div class="article title">
-                Personal Data
-            </div>
+
+            <header class="article title">
+                <h3>Personal Data</h3>
+            </header>
 
             <div class="article element">
               <!-- PERSONAL DATA FORM -->
@@ -174,7 +170,7 @@
                   <li><span>Phone</span><input  type="text" class="subject"></li>
                 </ul>
               </div>
-          </div>
+            </div>
 
             <div class="article element">
               <div class="form-list wrapper-flex">
@@ -193,12 +189,7 @@
               </div>
             </div>
           </section>
-        </div>
-
-      </section>
-
-
-
-
+        </side>
+      </main>
   </body>
 </html>

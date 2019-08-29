@@ -29,7 +29,7 @@
 
 .sidebar-header{
   font-family: $fancy-font;
-  padding: 15px 15px 0px 15px;
+  padding: 0 15px 0 15px;
 }
 
 .sidebar-header span:hover{
@@ -61,6 +61,10 @@
   color: white;
 }
 
+.chat h3{
+  margin: 0;
+}
+
 .display-top-bar{
   display: none;
 }
@@ -82,7 +86,7 @@
     font-family: $brand-font;
     font-size: 20px;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
   }
 
   .display-top-bar{

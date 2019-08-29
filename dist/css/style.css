@@ -371,7 +371,7 @@ body {
   position: fixed;
 }
 
-.top-bar {
+.side-container {
   width: 100%;
   padding: 0 0 0 183px;
   height: 200vh;
@@ -379,7 +379,7 @@ body {
   color: RGBA(0, 0, 0, 0.7);
 }
 
-.nav {
+.top-bar-nav {
   padding-right: 183px;
   width: 100%;
   height: 60px;
@@ -402,7 +402,7 @@ body {
 }
 
 @media (max-width: 810px) {
-  .nav {
+  .top-bar-nav {
     display: none;
   }
 }
@@ -442,7 +442,7 @@ body {
 
 .sidebar-header {
   font-family: "Pacifico", cursive;
-  padding: 15px 15px 0px 15px;
+  padding: 0 15px 0 15px;
 }
 
 .sidebar-header span:hover {
@@ -471,6 +471,10 @@ body {
 
 .chat li:hover {
   color: white;
+}
+
+.chat h3 {
+  margin: 0;
 }
 
 .display-top-bar {
@@ -581,6 +585,10 @@ body {
   padding: 10px;
   font-weight: 700;
   font-size: 25px;
+}
+
+.title h3 {
+  margin: 0;
 }
 
 .element {
