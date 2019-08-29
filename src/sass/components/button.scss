@@ -1,11 +1,5 @@
 @import '../variables';
 
-
-.button-wrapper{
-  display: flex;
-  justify-content: center;
-}
-
 .button{
   display: flex;
   justify-content: center;
@@ -21,4 +15,12 @@
   background: $button-hover;
   color: $topbar-font-color;
   cursor: pointer;
+}
+
+@media (max-width: 720px)
+{
+  .button{
+    padding: 5px;
+    margin: 7px;
+  }
 }

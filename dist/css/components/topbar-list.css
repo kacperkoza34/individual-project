@@ -33,4 +33,15 @@
   margin: 0 8px 0 8px;
 }
 
+@media (max-width: 880px) {
+  .link-list li {
+    height: 60px;
+    line-height: 40px;
+    padding: 10px 0 10px 0;
+    border-top: 0.5px solid;
+    border-color: RGBA(0, 0, 0, 0.7);
+    width: 400px;
+  }
+}
+
 /*# sourceMappingURL=topbar-list.css.map */

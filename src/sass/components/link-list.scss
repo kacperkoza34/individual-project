@@ -1,12 +1,6 @@
 @import '../variables';
 
 
-.link-list{
-  display: flex;
-  //height: 600px;
-  justify-content: center;
-}
-
 .link-list ul{
   padding: 0;
 
@@ -52,4 +46,42 @@
 
 .link-list .fa-copy:hover{
   color: #000;
+}
+
+@media (max-width: 980px)
+{
+  .link-list li{
+    height: 60px;
+    line-height: 40px;
+    padding: 10px 0 10px 0;
+    border-top: 0.5px solid;
+    border-color: $topbar-font-color;
+    width: 400px;
+  }
+  .link-icons{
+    color: $topbar-font-color;
+  }
+}
+
+@media (max-width: 720px)
+{
+  .link-list li{
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    line-height: 25px;
+    font-size: 20px;
+    padding: 3px 0 3px 0;
+    border-top: 0.5px solid;
+    border-color: $topbar-font-color;
+    width: 280px;
+  }
+
+  .link-list li span:last-child{
+    display: flex;
+    flex-direction: column;
+    top: -30px;
+    padding: 0 0 0 240px;
+  }
+
 }

@@ -1,11 +1,6 @@
 /* Colors */
 /* Font sizes */
 /* Fonts */
-.button-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
 .button {
   display: flex;
   justify-content: center;
@@ -21,6 +16,13 @@
   background: orange;
   color: RGBA(0, 0, 0, 0.7);
   cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .button {
+    padding: 5px;
+    margin: 7px;
+  }
 }
 
 /*# sourceMappingURL=button.css.map */

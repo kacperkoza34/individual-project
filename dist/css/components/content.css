@@ -1,5 +1,5 @@
 .content {
-  margin: 80px 150px;
+  margin: 80px 20px;
   background: white;
 }
 
@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-.element-title {
+.title {
   padding: 10px;
   font-weight: 700;
   font-size: 25px;
@@ -29,7 +29,14 @@
 .element {
   display: flex-wrap;
   justify-content: center;
-  padding: 40px 10px 40px 10px;
+  padding: 0 10px 0 10px;
+}
+
+@media (max-width: 810px) {
+  .content {
+    margin: 0 0 20px 0;
+    background: white;
+  }
 }
 
 /*# sourceMappingURL=content.css.map */

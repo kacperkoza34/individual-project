@@ -1,11 +1,6 @@
 /* Colors */
 /* Font sizes */
 /* Fonts */
-.link-list {
-  display: flex;
-  justify-content: center;
-}
-
 .link-list ul {
   padding: 0;
 }
@@ -49,6 +44,40 @@
 
 .link-list .fa-copy:hover {
   color: #000;
+}
+
+@media (max-width: 980px) {
+  .link-list li {
+    height: 60px;
+    line-height: 40px;
+    padding: 10px 0 10px 0;
+    border-top: 0.5px solid;
+    border-color: RGBA(0, 0, 0, 0.7);
+    width: 400px;
+  }
+  .link-icons {
+    color: RGBA(0, 0, 0, 0.7);
+  }
+}
+
+@media (max-width: 720px) {
+  .link-list li {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    line-height: 25px;
+    font-size: 20px;
+    padding: 3px 0 3px 0;
+    border-top: 0.5px solid;
+    border-color: RGBA(0, 0, 0, 0.7);
+    width: 280px;
+  }
+  .link-list li span:last-child {
+    display: flex;
+    flex-direction: column;
+    top: -30px;
+    padding: 0 0 0 240px;
+  }
 }
 
 /*# sourceMappingURL=link-list.css.map */

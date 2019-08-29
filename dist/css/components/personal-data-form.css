@@ -1,17 +1,12 @@
 /* Colors */
 /* Font sizes */
 /* Fonts */
-.personal-data-form {
-  display: flex;
-  justify-content: center;
-}
-
-.personal-data-form ul {
+.inline-list ul {
   padding: 0;
   list-style: none;
 }
 
-.personal-data-form li {
+.inline-list li {
   display: flex;
   justify-content: space-between;
   height: 45px;
@@ -19,7 +14,7 @@
   width: 500px;
 }
 
-.personal-data-form li span {
+.inline-list li span {
   margin: 10px 0 10px 0;
   font-weight: 700;
 }

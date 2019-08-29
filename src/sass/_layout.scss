@@ -17,7 +17,7 @@ body{
   display: flex;
 }
 .side-bar{
-  //width: 200px;
+  width: 183px;
   background: $sidebar-background;
   color: white;
   height: 100vh;
@@ -25,25 +25,10 @@ body{
   position: fixed;
 }
 
-.sidebar-header{
-  font-family: $fancy-font;
-  padding: 15px 15px 0px 15px;
-}
-
-.sidebar-header:hover{
-  color: $sidebar-font-color;
-}
-
-
-.sidebar-header span{
-    margin-left: 40px;
-}
-
 .top-bar{
   width: 100%;
   padding: 0 0 0 183px;
   height: 200vh;
-  display: flex;
   font-family: $brand-font;
   color:$topbar-font-color;
   //flex-direction: row-reverse;
@@ -58,4 +43,17 @@ body{
 .main-section{
   width: 100%;
   display: block;
+}
+
+.wrapper-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 810px)
+{
+  .nav{
+    display: none;
+  }
 }
