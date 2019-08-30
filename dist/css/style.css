@@ -369,6 +369,7 @@ body {
   height: 100vh;
   z-index: 22;
   position: fixed;
+  overflow: scroll;
 }
 
 .side-container {
@@ -456,7 +457,6 @@ body {
 .chat {
   padding-left: 18px;
   color: RGBA(255, 255, 255, 0.5);
-  width: 182px;
 }
 
 .chat ul {
@@ -466,7 +466,6 @@ body {
 
 .chat li {
   list-style: none;
-  width: 183px;
 }
 
 .chat li:hover {
@@ -907,6 +906,65 @@ input, textarea {
     width: 90px;
     margin: 0;
   }
+}
+
+.double-list {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.double-list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
+}
+
+.double-list li {
+  width: 50%;
+  min-width: 200px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  padding: 20px;
+}
+
+.double-list h4 {
+  margin: 0;
+}
+
+/* Colors */
+/* Font sizes */
+/* Fonts */
+.custom-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar:hover {
+  width: 15px;
+}
+
+/* Track */
+.custom-scroll::-webkit-scrollbar-track {
+  box-shadow: grey;
+}
+
+/* Handle */
+.custom-scroll::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 5px RGBA(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+/* Handle on hover */
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: RGBA(255, 255, 255, 0.1);
 }
 
 /* Sections */

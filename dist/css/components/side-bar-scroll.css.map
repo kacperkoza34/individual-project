@@ -1,0 +1,10 @@
+{
+	"version": 3,
+	"file": "side-bar-scroll.css",
+	"sources": [
+		"../../../src/sass/components/side-bar-scroll.scss",
+		"../../../src/sass/_variables.scss"
+	],
+	"names": [],
+	"mappings": "ACAA,YAAY;AAaZ,gBAAgB;AAGhB,WAAW;ADdX,AAAA,cAAc,AAAA,mBAAmB,CAAC;EAChC,KAAK,EAAE,IAAI;CACZ;;AAED,AAAA,cAAc,AAAA,mBAAmB,AAAA,MAAM,CAAC;EACtC,KAAK,EAAE,IAAI;CACZ;;AAED,WAAW;AACX,AAAA,cAAc,AAAA,yBAAyB,CAAC;EACtC,UAAU,EAAE,IAAI;CACjB;;AAED,YAAY;AACZ,AAAA,cAAc,AAAA,yBAAyB,CAAC;EACtC,UAAU,EAAE,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CCbN,wBAAwB;EDc3C,aAAa,EAAE,GAAG;CACnB;;AAED,qBAAqB;AACrB,AAAA,cAAc,AAAA,yBAAyB,AAAA,MAAM,CAAC;EAC5C,UAAU,ECbK,wBAAwB;CDcxC"
+}

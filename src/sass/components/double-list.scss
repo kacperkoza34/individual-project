@@ -1,0 +1,27 @@
+
+.double-list {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.double-list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.double-list li {
+  width: 50%;
+  min-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.double-list h4 {
+  margin: 0;
+}
