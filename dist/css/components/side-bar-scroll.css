@@ -25,4 +25,8 @@
   background: RGBA(255, 255, 255, 0.1);
 }
 
+.custom-scroll::-webkit-scrollbar-corner {
+  background: #1e1e1e;
+}
+
 /*# sourceMappingURL=side-bar-scroll.css.map */

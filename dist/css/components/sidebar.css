@@ -30,9 +30,12 @@
   margin-right: 20px;
 }
 
+header {
+  padding: 0 15px 0 15px;
+}
+
 .sidebar-header {
   font-family: "Pacifico", cursive;
-  padding: 0 15px 0 15px;
 }
 
 .sidebar-header span:hover {
@@ -62,7 +65,7 @@
 }
 
 .chat h3 {
-  margin: 0;
+  margin: 0 10px 0 10px;
 }
 
 .display-top-bar {
@@ -92,6 +95,39 @@
   .chat {
     border-bottom: 1px solid;
     border-color: RGBA(255, 255, 255, 0.5);
+  }
+}
+
+.sidebar-header span {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .sidebar-ul {
+    border: 0;
+  }
+  .chat {
+    border: 0;
+  }
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sidebar-header span {
+    display: block;
+  }
+  .sidebar-header span, h3 {
+    margin: 35px 15px 15px 15px;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .mobile-nav h3 {
+    margin: 5px;
+  }
+  .mobile-nav-active {
+    display: block;
+    height: 60vh;
   }
 }
 

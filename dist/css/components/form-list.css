@@ -1,19 +1,18 @@
-@import '../variables';
-
-
-input, textarea{
+/* Colors */
+/* Font sizes */
+/* Fonts */
+input, textarea {
   width: 300px;
   padding: 5px;
   margin: 10px 0 10px 0;
 }
 
-
-.form-list ul{
+.form-list ul {
   list-style: none;
   padding: 0;
 }
 
-.form-list li{
+.form-list li {
   display: flex;
   justify-content: space-between;
   height: 45px;
@@ -21,31 +20,29 @@ input, textarea{
   width: 500px;
 }
 
-.form-list li span{
+.form-list li label {
   margin: 10px 0 10px 0;
   font-weight: 700;
 }
 
-
-@media (max-width: 720px)
-{
-  .form-list li{
+@media (max-width: 720px) {
+  .form-list li {
     display: flex;
     flex-direction: column;
     height: 60px;
     line-height: 26px;
     width: 200px;
   }
-
-  .form-list li span{
+  .form-list li label {
     margin: 3px 0 3px 0;
   }
-  .form-list li input{
+  .form-list li input {
     margin: 3px 0 3px 0;
   }
-  input, textarea{
+  input, textarea {
     width: 200px;
     height: 30px;
   }
-
 }
+
+/*# sourceMappingURL=form-list.css.map */

@@ -1,6 +1,6 @@
 @import '../variables';
 
-.topbar-ul{
+.topbar-ul {
   margin: 0;
   padding: 0;
   display: flex;
@@ -9,7 +9,8 @@
   border-bottom-width: 1px;
   border-bottom-color: $topbar-font-color;
 }
-.topbar-li{
+
+.topbar-li {
   padding: 0 20px 0 20px;
   color: $topbar-font-color;
   list-style: none;
@@ -21,18 +22,18 @@
   border-left-color: $topbar-font-color;
 }
 
-.topbar-li:hover{
+.topbar-li:hover {
   color: $topbar-font-hover;
   background: $topbar-hover-backgr;
   cursor: pointer;
 }
-.topbar-li span{
+.topbar-li span {
   margin: 0 8px 0 8px;
 }
 
 @media (max-width: 880px)
 {
-  .link-list li{
+  .link-list li {
     height: 60px;
     line-height: 40px;
     padding: 10px 0 10px 0;

@@ -7,19 +7,20 @@
 .custom-scroll::-webkit-scrollbar:hover {
   width: 15px;
 }
-
 /* Track */
 .custom-scroll::-webkit-scrollbar-track {
   box-shadow: grey;
 }
-
 /* Handle */
 .custom-scroll::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 5px $sidebar-font-color;
   border-radius: 4px;
 }
-
 /* Handle on hover */
 .custom-scroll::-webkit-scrollbar-thumb:hover {
   background: $sidebar-scroll;
+}
+
+.custom-scroll::-webkit-scrollbar-corner {
+   background: $sidebar-background;
 }

@@ -1,22 +1,63 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-body{
+
+body {
   background: $brand-main-color;
   font-family: $brand-font;
-
 }
 
-.grid-test{
-  border: 3px solid red;
+.test-class {
+  width: 100%;
+  height: 300px;
+  background: grey;
+  //border: 1px solid black;
 }
-.none{
+
+//  MY CUSTOM GRID
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@for $i from 1 through 12 {
+  .col-sm-#{$i} {
+    $width: 100% / 12 * $i;
+    flex: 0 0 $width;
+    max-width: $width;
+  }
+}
+
+//  END MY CUSTOM GRID
+
+.none {
   display: none;
 }
-.main-container{
+
+.display {
+  display: block;
+}
+
+.main-container {
   display: flex;
 }
-.side-bar{
+
+.side-bar {
   width: 183px;
   background: $sidebar-background;
   color: white;
@@ -26,7 +67,7 @@ body{
   overflow: scroll;
 }
 
-.side-container{
+.side-container {
   width: 100%;
   padding: 0 0 0 183px;
   height: 200vh;
@@ -34,19 +75,21 @@ body{
   color:$topbar-font-color;
   //flex-direction: row-reverse;
 }
-.top-bar-nav{
+
+.top-bar-nav {
   padding-right: 183px;
   width: 100%;
   height: 60px;
   position: fixed;
   background: white;
 }
-.main-section{
+
+.main-section {
   width: 100%;
   display: block;
 }
 
-.wrapper-flex{
+.wrapper-flex {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +97,44 @@ body{
 
 @media (max-width: 810px)
 {
-  .top-bar-nav{
+  .top-bar-nav {
     display: none;
   }
+}
+
+@media (max-width: 480px)
+{
+  .side-bar {
+    width: 100%;
+    height: auto;
+    background: $sidebar-background;
+    color: white;
+    z-index: 22;
+    position: fixed;
+  }
+
+  .side-bar-active {
+    height: 100vh;
+  }
+
+  .side-container {
+    padding: 100px 0 0 0;
+  }
+}
+
+
+@media(max-width: 386px) {
+  @include grid('sm');
+}
+
+@media(min-width: 444px) {
+  @include grid('md');
+}
+
+@media(min-width: 780px) {
+  @include grid('lg');
+}
+
+@media(min-width: 1000px) {
+  @include grid('xl');
 }

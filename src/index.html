@@ -4,6 +4,7 @@
 	   <meta charset="UTF-8">
 	    <title>Project</title>
 	     <link rel="stylesheet" href="css/style.css">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link href="https://fonts.googleapis.com/css?family=Abel|Pacifico&display=swap" rel="stylesheet">
        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
@@ -14,43 +15,53 @@
 
       <aside class="side-bar custom-scroll">
 
+
+
         <header class="sidebar-header">
           <h3>Just do it!</h3>
+          <span class="fas fa-align-justify"></span>
         </header>
 
-        <nav>
-          <ul class="sidebar-ul">
-            <li class="sidebar-li"><span class="fas fa-align-justify"></span>sekcja</li>
-            <li class="sidebar-li"><span class="fas fa-align-justify"></span>wybor</li>
-            <li class="sidebar-li"><span class="fas fa-align-justify"></span>opcja</li>
-            <li class="sidebar-li"><span class="fas fa-align-justify"></span>HTML-CSS-JS</li>
-            <li class="sidebar-li"><span class="fas fa-align-justify"></span>Element</li>
-            <li class="sidebar-li"><span class="fas fa-align-justify"></span>Click</li>
-            <li class="sidebar-li"><span class="fas fa-align-justify"></span>Last</li>
-          </ul>
-        </nav>
+        <section class="mobile-nav">
 
-        <section class="chat">
+          <nav>
+            <ul class="sidebar-ul">
+              <li class="sidebar-li"><span class="fas fa-align-justify"></span>sekcja</li>
+              <li class="sidebar-li"><span class="fas fa-align-justify"></span>wybor</li>
+              <li class="sidebar-li"><span class="fas fa-align-justify"></span>opcja</li>
+              <li class="sidebar-li"><span class="fas fa-align-justify"></span>HTML-CSS-JS</li>
+              <li class="sidebar-li"><span class="fas fa-align-justify"></span>Element</li>
+              <li class="sidebar-li"><span class="fas fa-align-justify"></span>Click</li>
+              <li class="sidebar-li"><span class="fas fa-align-justify"></span>Last</li>
+            </ul>
+          </nav>
+
           <header>
             <h3>Your Menager</h3>
           </header>
-          <ul class="chat-list">
-            <li>
-              <span class="fas fa-user"></span>
-              <span>Jan Kowalski</span>
-            </li>
-          </ul>
-        </section>
 
-        <section>
-          <ul class="sidebar-ul display-top-bar">
-            <li class="sidebar-li"><span class="fas fa-sign-out-alt"></span><span>Exit</span></li>
-            <li class="sidebar-li"><span class="fas fa-user"></span><span>Leonardo Dicaprio</span></li>
-            <li class="sidebar-li"><span class="fas fa-bell"></span>Alert</li>
-            <li class="sidebar-li"><span class="fas fa-wallet"></span><span>1000.00.00$</span></li>
-          </ul>
-        </section>
+          <section class="chat">
+            <ul class="chat-list">
+              <li>
+                <span class="fas fa-user"></span>
+                <span>Jan Kowalski</span>
+              </li>
+            </ul>
+          </section>
 
+          <header class="display-top-bar">
+            <h3>Your account</h3>
+          </header>
+
+          <section>
+            <ul class="sidebar-ul display-top-bar">
+              <li class="sidebar-li"><span class="fas fa-sign-out-alt"></span><span>Exit</span></li>
+              <li class="sidebar-li"><span class="fas fa-user"></span><span>Leonardo Dicaprio</span></li>
+              <li class="sidebar-li"><span class="fas fa-bell"></span>Alert</li>
+              <li class="sidebar-li"><span class="fas fa-wallet"></span><span>1000.00.00$</span></li>
+            </ul>
+          </section>
+        </section>
       </aside>
 
       <!-- TOPBAR -->
@@ -98,9 +109,20 @@
               </div>
             </div>
 
+            <div class="article element">
+              <div class="wrapper-flex">
+                <section class="container">
+                  <div class="row">
+                    <div class="col-sm-8 col-xl-9 test-class">
+
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+
 
           </section>
-
 
           <section class="content">
 
@@ -144,10 +166,27 @@
               <!-- PERSONAL DATA FORM -->
               <div class="form-list wrapper-flex">
                 <ul>
-                  <li><span>Name</span><input  type="text" class="name"></li>
-                  <li><span>Surname</span><input  type="text" class="subject"></li>
-                  <li><span>Email</span><input  type="text" class="subject"></li>
-                  <li><span>Phone</span><input  type="text" class="subject"></li>
+
+                  <li>
+                    <label for="nameInput">Name</label>
+                    <input id="nameInput" type="text">
+                  </li>
+
+                  <li>
+                    <label for="surnameInput">Surname</label>
+                    <input id="surnameInput" type="text">
+                  </li>
+
+                  <li>
+                    <label for="emailInput">Email</label>
+                    <input id="emailInput" type="text">
+                  </li>
+
+                  <li>
+                    <label for="phoneInput">Phone</label>
+                    <input id="phoneInput" type="text">
+                  </li>
+
                 </ul>
               </div>
             </div>
@@ -155,8 +194,17 @@
             <div class="article element">
               <div class="form-list wrapper-flex">
                 <ul>
-                  <li><span>Skype</span><input  type="text" class="name"></li>
-                  <li><span>Msn</span><input  type="text" class="subject"></li>
+
+                  <li>
+                    <label for="skypeInput">Skype</label>
+                    <input id="skypeInput" type="text">
+                  </li>
+
+                  <li>
+                    <label for="msnInput">MSN</label>
+                    <input id="msnInput" type="text">
+                  </li>
+
                 </ul>
               </div>
             </div>
@@ -169,7 +217,24 @@
               </div>
             </div>
           </section>
+
+          <section class="content">
+            <div class="article element">
+              <section class="container">
+                <div class="row">
+                  <div class="col-sm-7 col-xl-9 test-class">
+
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+
+
         </side>
       </main>
+
+      <script src="js/script.js" type="module"></script>
+
   </body>
 </html>
