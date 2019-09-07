@@ -62,10 +62,16 @@ header {
 
 .chat li:hover {
   color: white;
+  cursor: pointer;
 }
 
 .chat h3 {
   margin: 0 10px 0 10px;
+}
+
+.account h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 
 .display-top-bar {
@@ -85,7 +91,8 @@ header {
     line-height: 25px;
     font-family: "Abel", sans-serif;
     font-size: 20px;
-    overflow: hidden;
+  }
+  .sidebar-li span {
     text-overflow: ellipsis;
   }
   .display-top-bar {
@@ -125,9 +132,30 @@ header {
   .mobile-nav h3 {
     margin: 5px;
   }
+  @keyframes showNavElements {
+    from {
+      height: 88.5px;
+    }
+    to {
+      height: 100vh;
+    }
+  }
   .mobile-nav-active {
     display: block;
-    height: 60vh;
+    animation: showNavElements 600ms ease-in-out both;
+  }
+  @keyframes hiddNavElements {
+    from {
+      height: 100vh;
+    }
+    to {
+      height: 0;
+    }
+  }
+  .mobile-nav-disactive {
+    display: block;
+    overflow: hidden;
+    animation: hiddNavElements 600ms ease-in-out both;
   }
 }
 

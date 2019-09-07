@@ -25,6 +25,15 @@ input, textarea {
   font-weight: 700;
 }
 
+.form-list span input {
+  width: auto;
+}
+
+.agrement-content {
+  width: 450px;
+  margin: 10px;
+}
+
 @media (max-width: 720px) {
   .form-list li {
     display: flex;
@@ -32,6 +41,9 @@ input, textarea {
     height: 60px;
     line-height: 26px;
     width: 200px;
+  }
+  .agrement-content {
+    width: 160px;
   }
   .form-list li label {
     margin: 3px 0 3px 0;

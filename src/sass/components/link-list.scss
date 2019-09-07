@@ -66,20 +66,23 @@
   .link-list li {
     display: flex;
     flex-direction: column;
-    height: 80px;
-    line-height: 25px;
+    height: 100%;
     font-size: 20px;
-    padding: 3px 0 3px 0;
+    padding: 15px 0 15px 0;
     border-top: 0.5px solid;
     border-color: $topbar-font-color;
     width: 280px;
   }
 
-  .link-list li span:last-child {
+  .link-list li span {
     display: flex;
-    flex-direction: column;
-    top: -30px;
-    padding: 0 0 0 240px;
+    justify-content: center;
   }
+}
 
+@media (max-width: 400px)
+{
+  .link-list li {
+    width: 220px;
+  }
 }
