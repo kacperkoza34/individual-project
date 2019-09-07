@@ -1,6 +1,6 @@
 @import '../variables';
 
-.button {
+.btn-std {
   text-decoration: none;
   border: none;
   display: flex;
@@ -13,7 +13,7 @@
   color: white;
 }
 
-.button:hover {
+.btn-std:hover {
   background: $button-hover;
   color: $topbar-font-color;
   cursor: pointer;
@@ -21,7 +21,7 @@
 
 @media (max-width: 720px)
 {
-  .button{
+  .btn-std{
     padding: 5px;
     margin: 7px;
   }

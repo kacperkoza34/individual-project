@@ -130,6 +130,26 @@ body {
   }
 }
 
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
+
 
 @media(max-width: 386px) {
   @include grid('sm');

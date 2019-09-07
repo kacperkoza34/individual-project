@@ -58,6 +58,7 @@ header {
 
 .chat li {
   list-style: none;
+  color: RGBA(255, 255, 255, 0.5);
 }
 
 .chat li:hover {

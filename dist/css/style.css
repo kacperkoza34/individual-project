@@ -532,6 +532,26 @@ body {
   }
 }
 
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  color: white;
+}
+
+/* mouse over link */
+a:hover {
+  color: white;
+}
+
+/* selected link */
+a:active {
+  color: white;
+}
+
 @media (max-width: 386px) {
   .col-sm-1 {
     -ms-flex: 0 0 8.33333%;
@@ -845,6 +865,7 @@ header {
 
 .chat li {
   list-style: none;
+  color: RGBA(255, 255, 255, 0.5);
 }
 
 .chat li:hover {
@@ -1140,7 +1161,7 @@ header {
 /* Colors */
 /* Font sizes */
 /* Fonts */
-.button {
+.btn-std {
   text-decoration: none;
   border: none;
   display: -ms-flexbox;
@@ -1156,14 +1177,14 @@ header {
   color: white;
 }
 
-.button:hover {
+.btn-std:hover {
   background: orange;
   color: RGBA(0, 0, 0, 0.7);
   cursor: pointer;
 }
 
 @media (max-width: 720px) {
-  .button {
+  .btn-std {
     padding: 5px;
     margin: 7px;
   }
