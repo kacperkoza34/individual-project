@@ -25,9 +25,9 @@
 
           <nav>
             <ul class="sidebar-ul">
-              <a href="#"><li class="sidebar-li"><span class="fas fa-star"></span>sekcja</li></a>
-              <a href="#"><li class="sidebar-li"><span class="fas fa-money-check"></span>wybor</li></a>
-              <a href="#"><li class="sidebar-li"><span class="fas fa-link"></span>opcja</li></a>
+              <a href="#chart"><li class="sidebar-li"><span class="fas fa-star"></span>Chart</li></a>
+              <a href="#link-list"><li class="sidebar-li"><span class="fas fa-money-check"></span>Link list</li></a>
+              <a href="#personal-data"><li class="sidebar-li"><span class="fas fa-link"></span>Personal data</li></a>
               <a href="#"><li class="sidebar-li"><span class="fas fa-user-shield"></span>HTML-CSS-JS</li></a>
               <a href="#"><li class="sidebar-li"><span class="fas fa-money-bill-wave-alt"></span>Element</li></a>
               <a href="#"><li class="sidebar-li"><span class="fas fa-align-justify"></span>Click</li></a>
@@ -79,8 +79,9 @@
           </ul>
         </nav>
 
+        <div id="pages">
 
-          <section class="content">
+          <section class="none" id="chart">
 
             <header class="article title">
                 <h3>Chart</h3>
@@ -109,12 +110,16 @@
               </div>
             </div>
 
+            <div class="article element">
+              <canvas id="myChart"></canvas>
+            </div>
+
           </section>
 
-          <section class="content">
+          <section class="none" id="link-list">
 
             <header class="article title">
-                <h3>Chart</h3>
+                <h3>Link list</h3>
             </header>
 
             <div class="article element">
@@ -148,7 +153,7 @@
 
           </section>
 
-          <section class="content">
+          <section class="none" id="personal-data">
 
             <header class="article title">
                 <h3>Personal Data</h3>
@@ -260,6 +265,7 @@
             </div>
           </section>
 
+        </div>
 
           <div class="overlay" id="overlay">
             <div class="modal" id="myModal">
@@ -270,13 +276,13 @@
 
                 <button class="btn-std js--close-modal">Okay</button>
             </div>
-        </div>
+          </div>
 
         </side>
 
     </main>
-
-      <script src="js/script.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="js/script.js" type="module"></script>
 
   </body>
 </html>

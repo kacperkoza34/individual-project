@@ -71,10 +71,8 @@ body {
 .side-container {
   width: 100%;
   padding: 0 0 0 183px;
-  height: 200vh;
   font-family: $brand-font;
   color:$topbar-font-color;
-  //flex-direction: row-reverse;
 }
 
 .top-bar-nav {
@@ -129,27 +127,6 @@ body {
     //height: 100vh;
   }
 }
-
-a:link {
-  color: white;
-  text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-  color: white;
-}
-
-/* mouse over link */
-a:hover {
-  color: white;
-}
-
-/* selected link */
-a:active {
-  color: white;
-}
-
 
 @media(max-width: 386px) {
   @include grid('sm');

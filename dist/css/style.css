@@ -474,7 +474,6 @@ body {
 .side-container {
   width: 100%;
   padding: 0 0 0 183px;
-  height: 200vh;
   font-family: "Abel", sans-serif;
   color: RGBA(0, 0, 0, 0.7);
 }
@@ -530,26 +529,6 @@ body {
   .side-bar-active {
     animation: showNavBar 600ms ease-in-out both;
   }
-}
-
-a:link {
-  color: white;
-  text-decoration: none;
-}
-
-/* visited link */
-a:visited {
-  color: white;
-}
-
-/* mouse over link */
-a:hover {
-  color: white;
-}
-
-/* selected link */
-a:active {
-  color: white;
 }
 
 @media (max-width: 386px) {
@@ -833,6 +812,14 @@ a:active {
   cursor: pointer;
 }
 
+.sidebar-li-active {
+  border-left: 4px solid orange;
+  padding: 0 0 0 14px;
+  background: RGB(50, 50, 50);
+  color: RGBA(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
 .sidebar-li span {
   margin-right: 20px;
 }
@@ -884,6 +871,26 @@ header {
 
 .display-top-bar {
   display: none;
+}
+
+.aside-bar a:link {
+  color: white;
+  text-decoration: none;
+}
+
+/* visited link */
+.aside-bar a:visited {
+  color: white;
+}
+
+/* mouse over link */
+.aside-bar a:hover {
+  color: white;
+}
+
+/* selected link */
+.aside-bar a:active {
+  color: white;
 }
 
 @media (max-width: 810px) {
@@ -1020,8 +1027,9 @@ header {
 }
 
 .content {
-  margin: 80px 20px;
+  margin: 80px 20px 20px 20px;
   background: white;
+  display: block;
 }
 
 .article {
@@ -1084,6 +1092,7 @@ header {
   padding: 10px 0 10px 0;
   border-top: 0.5px solid;
   border-color: RGBA(0, 0, 0, 0.7);
+  color: RGBA(0, 0, 0, 0.7);
   width: 600px;
 }
 

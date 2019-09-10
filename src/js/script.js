@@ -1,4 +1,115 @@
 
+var ctx = document.getElementById('myChart').getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        datasets: [{
+            data: [20, 50, 100, 75, 25, 0],
+            label: 'Left dataset',
+
+            // This binds the dataset to the left y axis
+            yAxisID: 'left-y-axis'
+        }],
+        labels: ['2019-9-2', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                id: 'left-y-axis',
+                type: 'linear',
+                position: 'left'
+            }, {
+                id: 'right-y-axis',
+                type: 'linear',
+                position: 'right'
+            }]
+        }
+    }
+});
+
+
+
+const app ={
+
+initPages: function(){
+  const thisApp = this;
+
+  thisApp.pages = document.querySelector('#pages').children;
+  console.log('pages: ', thisApp.pages );
+
+  thisApp.navLinks = document.querySelectorAll('aside nav .sidebar-ul a');
+  console.log('navLinks: ', thisApp.navLinks );
+
+  thisApp.linksArray = Array.from(thisApp.navLinks);
+
+  const idFromHash = window.location.hash.replace('#/','');
+  console.log(idFromHash);
+
+  let pageMatchingHash = thisApp.pages[0].id;
+
+  for(let page of thisApp.pages){
+    if(page.id == idFromHash){
+      pageMatchingHash = page.id;
+      break;
+    }
+  }
+
+  thisApp.activatePage(pageMatchingHash);
+
+  for(let link of thisApp.linksArray){
+    //console.log('link z node list:',link);
+    link.addEventListener('click', function(event){
+      const clickedElement = this;
+      event.preventDefault();
+
+      console.log(clickedElement);
+      /* get pade id from href attribute */
+      //////////////////
+      const id = clickedElement.getAttribute('href').replace('#','');
+      /* run thisApp.activatePage with that id */
+      ///////////////////
+
+      thisApp.activatePage(id);
+      /* change URL hash */
+      window.location.hash = '#/' + id;
+
+      });
+    }
+  },
+
+
+  activatePage: function(pageId){
+    const thisApp = this;
+
+    for(let page of thisApp.pages){
+    page.classList.toggle('content', page.id == pageId);
+    }
+
+
+    for(let link of thisApp.linksArray){
+      //console.log('link z node list:',link);
+
+      let listElement = link.querySelector('li');
+      //console.log(listElement);
+
+      listElement.classList.toggle(
+        'sidebar-li-active',
+        link.getAttribute('href') == '#' + pageId
+      );
+      //if(link.getAttribute('href') == '#' + pageId & '#' + pageId == '#home') check = true;
+      //console.log(link.getAttribute('href'));
+    }
+
+  },
+
+}
+
+app.initPages();
+
+
+
+
 
 
 
@@ -51,7 +162,7 @@ document.addEventListener('keyup', function(e) {
 
 setTimeout(function(){
   openModal(document.getElementById('myModal'));
-},3000);
+},15000);
 
 
 
@@ -61,5 +172,5 @@ function openModal(modal) {
     modal.classList.remove('show')
   })
   document.querySelector('#overlay').classList.add('show')
-  document.querySelector(modal).classList.add('show')
+  modal.classList.add('show')
 }

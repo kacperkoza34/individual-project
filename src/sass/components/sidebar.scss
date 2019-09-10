@@ -22,6 +22,15 @@
   color: RGBA(255, 255, 255, 0.8);
   cursor: pointer;
 }
+
+.sidebar-li-active {
+  border-left: 4px solid orange;
+  padding: 0 0 0 14px;
+  background: $sidebar-li-hover;
+  color: RGBA(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
 .sidebar-li span{
   margin-right: 20px;
 }
@@ -74,6 +83,27 @@ header{
 .display-top-bar{
   display: none;
 }
+
+.aside-bar a:link {
+  color: white;
+  text-decoration: none;
+}
+
+/* visited link */
+.aside-bar a:visited {
+  color: white;
+}
+
+/* mouse over link */
+.aside-bar a:hover {
+  color: white;
+}
+
+/* selected link */
+.aside-bar a:active {
+  color: white;
+}
+
 
 @media (max-width: 810px)
 {
