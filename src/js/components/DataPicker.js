@@ -1,3 +1,6 @@
+import helpFunctions from '../helpFunctions.js';
+
+
 class DatePicker {
   constructor(){
     const thisDataPicker = this;
@@ -16,26 +19,19 @@ class DatePicker {
     disable: [
         function(date) {
             // disable every multiple of 8
-            return !(date.getDate() % 8);
+            return !(date.getDate() % 12);
         }
     ],
     altInput: true,
     altFormat: "F j, Y",
-    maxDate: '',
-    minDate: '',
-    defaultDate: new Date,
+    maxDate: new Date,
+    minDate: '2019-08-17',
+    defaultDate: [helpFunctions.dateToStr(helpFunctions.addDays(new Date(), -10)), helpFunctions.dateToStr(new Date())]
 
   }
-    console.log(domElem);
+
+    //console.log(new Date);
     flatpickr(domElem, pickerSettings);
-  }
-
-
-  parseValue(value){
-    return value;
-  }
-  isValid(value){
-    return true;
   }
 }
 

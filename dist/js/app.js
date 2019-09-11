@@ -1,6 +1,8 @@
 import Modal from './components/Modal.js';
 import MobileNav from './components/MobileNav.js';
 import DataPicker from './components/DataPicker.js';
+import helpFunctions from './helpFunctions.js';
+
 
 
 
@@ -11,72 +13,99 @@ initModal: function(){
 },
 
 initMobileNav: function(){
-  const thisinitMobileNav = this;
-  this.initMobileNav = new MobileNav;
+  new MobileNav;
 },
 
 initChart: function(){
+
   new DataPicker;
 
   var ctx = document.getElementById('myChart').getContext('2d');
 
-/*
-  const localHost = '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3333' : '');
-  const url = localHost + '/' + 'chart-data' + '?' + 'test_ne=false';
+  const localHost = 'http://localhost:3333';
+  const url = localHost + '/chart-data';
 
-  console.log(url);
-
-  Promise.all([
-  fetch(url),
-  ])
-    .then(function(allResponses){
-
-      const bookingsResponse = allResponses;
-      test(allResponses);
-      return Promise.all([
-        bookingsResponse,
-      ]);
+  fetch(url, { method: 'GET' })
+    .then(function(response) {
+      return response.json();
+    }).then(function(response) {
+      test(response);
+      let dates;
+      const startChart = document.querySelector('#startChart');
+      const domElem = document.querySelector('#data-picker');
+      startChart.addEventListener('click', function(){
+        dates = helpFunctions.separetDates(domElem.value);
+        test(response, dates.startDate, dates.endDate);
+      });
     })
-    .then(function(response){
-    });
 
-    function test(response){
-      console.log(response);
+
+    //console.log(dates);
+    function test(response,
+                  startDate = helpFunctions.dateToStr(helpFunctions.addDays(new Date(), -10)),
+                  endDate = helpFunctions.dateToStr(new Date()))
+    {
+      let chart = null;
+      let blue = [];
+      let orange = [];
+      let green = [];
+      let date = [];
+      let myToggler = false;
+      console.log('start date:',startDate);
+      console.log('end date:',endDate);
+
+      console.log('blue:',blue);
+      console.log('orange:',orange);
+      console.log('green:',green);
+      console.log('date:',date);
+
+
+
+      for(let label in response){
+        //console.log(response[label].date);
+        if(response[label].date == startDate){
+          console.log(startDate, 'test togglera');
+          myToggler = true;
+        }
+        if(myToggler){
+          date.push(response[label].date);
+          blue.push(response[label].Signups);
+          orange.push(response[label].FTD);
+          green.push(response[label].Earned);
+
+
+          if(response[label].date == endDate) myToggler = false;
+        }
+      }
+
+
+      chart = new Chart(ctx, {
+        "type": "bar",
+        "data": {
+            "labels": date,
+            "datasets": [{
+                "label": 'Signups',
+                "backgroundColor": "#8DBEC8",
+                "borderColor": "#8DBEC8",
+                "data": blue
+            },
+            {
+                "label": 'FTD',
+                "backgroundColor": "#F29E4E",
+                "borderColor": "#F29E4E",
+                "data": orange
+            },
+            {
+                "label": 'Earned',
+                "backgroundColor": "#71B374",
+                "borderColor": "#71B374",
+                "data": green,
+            }]
+        }
+      }
+      );
     }
-    */
 
-  let chart = new Chart(ctx, {
-      // 1
-      type: 'bar',
-      data: {
-          // 2
-          labels: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"],
-          // 3
-          datasets: [{
-              // 4
-              label: "Signups",
-              // 5
-              backgroundColor: '#8DBEC8',
-              borderColor: '#8DBEC8',
-              // 6
-              data: [ 52, 51, 41, 94, 26, 6, 72, 9, 21, 88 ],
-          },
-          {
-              label: "FTD",
-              backgroundColor: '#F29E4E',
-              borderColor: '#F29E4E',
-              data: [ 6, 72, 1, 0, 47, 11, 50, 44, 63, 76 ],
-          },
-          {
-              label: "Earned",
-              backgroundColor: '#71B374',
-              borderColor: '#71B374',
-              data: [ 59, 49, 68, 90, 67, 41, 13, 38, 48, 48 ],
-              // 7
-              hidden: true,
-          }]
-      },
-  });
 },
 
 
@@ -85,15 +114,14 @@ initPages: function(){
   const thisApp = this;
 
   thisApp.pages = document.querySelector('#pages').children;
-  console.log('pages: ', thisApp.pages );
+  //console.log('pages: ', thisApp.pages );
 
   thisApp.navLinks = document.querySelectorAll('aside nav .sidebar-ul a');
-  console.log('navLinks: ', thisApp.navLinks );
+  //console.log('navLinks: ', thisApp.navLinks );
 
   thisApp.linksArray = Array.from(thisApp.navLinks);
 
   const idFromHash = window.location.hash.replace('#/','');
-  console.log(idFromHash);
 
   let pageMatchingHash = thisApp.pages[0].id;
 
@@ -111,7 +139,7 @@ initPages: function(){
     link.addEventListener('click', function(event){
       const clickedElement = this;
       event.preventDefault();
-      
+
       const id = clickedElement.getAttribute('href').replace('#','');
       /* run thisApp.activatePage with that id */
       ///////////////////
