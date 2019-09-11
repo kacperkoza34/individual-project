@@ -32,4 +32,14 @@
   padding: 20px;
 }
 
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-close:hover {
+  cursor: pointer;
+  color: black;
+}
+
 /*# sourceMappingURL=overlay.css.map */

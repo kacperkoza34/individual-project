@@ -35,7 +35,8 @@
 }
 
 .sidebar-li span {
-  margin-right: 20px;
+  margin-right: 10px;
+  text-overflow: ellipsis;
 }
 
 header {
@@ -120,9 +121,6 @@ header {
     line-height: 25px;
     font-family: "Abel", sans-serif;
     font-size: 20px;
-  }
-  .sidebar-li span {
-    text-overflow: ellipsis;
   }
   .display-top-bar {
     display: flex;

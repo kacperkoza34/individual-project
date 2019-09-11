@@ -33,5 +33,14 @@
   border: solid 1px $sidebar-background;
   color: $topbar-font-color;
   padding: 20px;
+}
 
+.modal form {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-close:hover {
+  cursor: pointer;
+  color: black;
 }

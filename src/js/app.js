@@ -1,5 +1,7 @@
 import Modal from './components/Modal.js';
 import MobileNav from './components/MobileNav.js';
+import DataPicker from './components/DataPicker.js';
+
 
 
 const app ={
@@ -9,12 +11,41 @@ initModal: function(){
 },
 
 initMobileNav: function(){
-  new MobileNav;
+  const thisinitMobileNav = this;
+  this.initMobileNav = new MobileNav;
 },
 
 initChart: function(){
+  new DataPicker;
+
   var ctx = document.getElementById('myChart').getContext('2d');
-  var chart = new Chart(ctx, {
+
+/*
+  const localHost = '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3333' : '');
+  const url = localHost + '/' + 'chart-data' + '?' + 'test_ne=false';
+
+  console.log(url);
+
+  Promise.all([
+  fetch(url),
+  ])
+    .then(function(allResponses){
+
+      const bookingsResponse = allResponses;
+      test(allResponses);
+      return Promise.all([
+        bookingsResponse,
+      ]);
+    })
+    .then(function(response){
+    });
+
+    function test(response){
+      console.log(response);
+    }
+    */
+
+  let chart = new Chart(ctx, {
       // 1
       type: 'bar',
       data: {
@@ -80,10 +111,7 @@ initPages: function(){
     link.addEventListener('click', function(event){
       const clickedElement = this;
       event.preventDefault();
-
-      console.log(clickedElement);
-      /* get pade id from href attribute */
-      //////////////////
+      
       const id = clickedElement.getAttribute('href').replace('#','');
       /* run thisApp.activatePage with that id */
       ///////////////////

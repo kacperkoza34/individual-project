@@ -48,10 +48,9 @@ class Modal{
 
   displayModal(){
     const thisModal = this;
-
-    setTimeout(function(){
+    document.querySelector('aside .chat a').addEventListener('click', function(){
       thisModal.openModal(document.getElementById('myModal'));
-    },3000);
+    });
   }
 }
 

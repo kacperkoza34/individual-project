@@ -821,7 +821,8 @@ body {
 }
 
 .sidebar-li span {
-  margin-right: 20px;
+  margin-right: 10px;
+  text-overflow: ellipsis;
 }
 
 header {
@@ -906,9 +907,6 @@ header {
     line-height: 25px;
     font-family: "Abel", sans-serif;
     font-size: 20px;
-  }
-  .sidebar-li span {
-    text-overflow: ellipsis;
   }
   .display-top-bar {
     display: -ms-flexbox;
@@ -1030,6 +1028,11 @@ header {
   margin: 80px 20px 20px 20px;
   background: white;
   display: block;
+}
+
+.chart {
+  max-width: 550px;
+  text-align: center;
 }
 
 .article {
@@ -1202,7 +1205,7 @@ header {
 /* Colors */
 /* Font sizes */
 /* Fonts */
-input, textarea {
+input {
   width: 300px;
   padding: 5px;
   margin: 10px 0 10px 0;
@@ -1356,47 +1359,6 @@ input, textarea {
   }
 }
 
-/* Colors */
-/* Font sizes */
-/* Fonts */
-.form-box {
-  display: -ms-flexbox;
-  display: flex;
-  height: 45px;
-  border: 1px solid;
-  border-color: RGBA(0, 0, 0, 0.7);
-}
-
-.form-box input {
-  border-width: 0;
-  border-style: none;
-  height: 43px;
-  width: 130px;
-  margin: 0;
-}
-
-.form-box input:first-child {
-  border-right: 1px solid;
-  border-color: RGBA(0, 0, 0, 0.7);
-}
-
-@media (max-width: 720px) {
-  .form-box {
-    display: -ms-flexbox;
-    display: flex;
-    height: 30px;
-    border: 1px solid;
-    border-color: RGBA(0, 0, 0, 0.7);
-  }
-  .form-box input {
-    border-width: 0;
-    border-style: none;
-    height: 28px;
-    width: 90px;
-    margin: 0;
-  }
-}
-
 .double-list {
   width: 100%;
   max-width: 500px;
@@ -1495,6 +1457,18 @@ input, textarea {
   border: solid 1px #1e1e1e;
   color: RGBA(0, 0, 0, 0.7);
   padding: 20px;
+}
+
+.modal form {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.btn-close:hover {
+  cursor: pointer;
+  color: black;
 }
 
 /* Sections */

@@ -5,10 +5,11 @@
 	    <title>Project</title>
 	     <link rel="stylesheet" href="css/style.css">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
        <link href="https://fonts.googleapis.com/css?family=Abel|Pacifico&display=swap" rel="stylesheet">
+       <link rel="stylesheet" type="text/html" href="vendor/icons/icon-font/css/Glyphter.css">
        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 
-    <!--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
   </head>
   <body>
     <main class="main-container">
@@ -28,9 +29,6 @@
               <a href="#chart"><li class="sidebar-li"><span class="fas fa-star"></span>Chart</li></a>
               <a href="#link-list"><li class="sidebar-li"><span class="fas fa-money-check"></span>Link list</li></a>
               <a href="#personal-data"><li class="sidebar-li"><span class="fas fa-link"></span>Personal data</li></a>
-              <a href="#"><li class="sidebar-li"><span class="fas fa-user-shield"></span>HTML-CSS-JS</li></a>
-              <a href="#"><li class="sidebar-li"><span class="fas fa-money-bill-wave-alt"></span>Element</li></a>
-              <a href="#"><li class="sidebar-li"><span class="fas fa-align-justify"></span>Click</li></a>
             </ul>
           </nav>
 
@@ -40,7 +38,7 @@
 
           <section class="chat">
             <ul class="chat-list">
-              <a href="#">
+              <a href="#send-message">
                 <li>
                   <span class="fas fa-user"></span>
                   <span>Jan Kowalski</span>
@@ -56,7 +54,7 @@
           <section>
             <ul class="sidebar-ul display-top-bar">
               <a href="#"><li class="sidebar-li"><span class="fas fa-sign-out-alt"></span><span>Exit</span></li></a>
-              <a href="#"><li class="sidebar-li"><span class="fas fa-user"></span><span>Leonardo Dicaprio</span></li></a>
+              <a href="#"><li class="sidebar-li"><span class="fas fa-user"></span><span>Leonardo</span></li></a>
               <a href="#"><li class="sidebar-li"><span class="fas fa-bell"></span>Alert</li></a>
               <a href="#"><li class="sidebar-li"><span class="fas fa-wallet"></span><span>1000.00.00$</span></li></a>
             </ul>
@@ -90,8 +88,7 @@
             <div class="article element">
               <div class="wrapper-flex">
                 <div class="form-box">
-                  <input  type="date" class="name">
-                  <input  type="date" class="name">
+                  <input id="data-picker" class="name">
                 </div>
                 <button class="btn-std">
                   <span class="fas fa-sync-alt"></span>
@@ -102,7 +99,7 @@
             <div class="article element">
               <div class="wrapper-flex double-list">
                 <ul>
-                  <li><span><h4>Title</h4></span><span>180</span></li>
+                  <li><span><h4>Title</h4></span><span>111</span></li>
                   <li><span><h4>Title</h4></span><span>882</span></li>
                   <li><span><h4>Title</h4></span><span>923</span></li>
                   <li><span><h4>Title</h4></span><span>123</span></li>
@@ -111,7 +108,9 @@
             </div>
 
             <div class="article element">
-              <canvas id="myChart"></canvas>
+              <div class="wrapper-flex">
+                <canvas id="myChart" class="chart"></canvas>
+              </div>
             </div>
 
           </section>
@@ -198,16 +197,6 @@
                     </li>
 
                     <li>
-                      <label for="skypeInput">Skype</label>
-                      <input id="skypeInput" type="text">
-                    </li>
-
-                    <li>
-                      <label for="msnInput">MSN</label>
-                      <input id="msnInput" type="text">
-                    </li>
-
-                    <li>
                       <label for="ageInput">Age</label>
                       <input id="ageInput" type="number">
                     </li>
@@ -272,9 +261,13 @@
               <div class="btn-close js--close-modal">x</div>
 
                 <h4>Witaj w modalu!</h4>
-                <p>Lorem ipsum dolor sit amet...</p>
-
-                <button class="btn-std js--close-modal">Okay</button>
+                <form action="" method="POST">
+                  <label for="subjectInput">Subject</label>
+                  <input id="subjectInput" type="text" required placeholder="Subject">
+                  <label for="textInput">Text</label>
+                  <textarea id="textInput" placeholder="Writte your message" required rows="5"></textarea>
+                  <button class="btn-std">Okay</button>
+                </form>
             </div>
           </div>
 
@@ -282,6 +275,7 @@
 
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="js/app.js" type="module"></script>
   </body>
 </html>
