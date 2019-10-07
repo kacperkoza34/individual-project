@@ -18,7 +18,7 @@ initMobileNav: function(){
 
 initChart: function(){
 
-  new DataPicker;
+  //new DataPicker;
 
   var ctx = document.getElementById('myChart').getContext('2d');
 
@@ -29,57 +29,78 @@ initChart: function(){
     .then(function(response) {
       return response.json();
     }).then(function(response) {
-      test(response);
+
+
+      new DataPicker(response);
+
       let dates;
+
       const startChart = document.querySelector('#startChart');
+
       const domElem = document.querySelector('#data-picker');
+
       startChart.addEventListener('click', function(){
         dates = helpFunctions.separetDates(domElem.value);
         test(response, dates.startDate, dates.endDate);
       });
+      test(response);
+
     })
 
 
     //console.log(dates);
     function test(response,
-                  startDate = helpFunctions.dateToStr(helpFunctions.addDays(new Date(), -10)),
-                  endDate = helpFunctions.dateToStr(new Date()))
+                  startDate = (response[Object.keys(response)[Object.keys(response).length-5]].date),
+                  endDate = (response[Object.keys(response)[Object.keys(response).length-1]].date))
     {
-      let chart = null;
-      let blue = [];
-      let orange = [];
-      let green = [];
-      let date = [];
+
+      //let chart = null;
+      const blue = [];
+      const orange = [];
+      const green = [];
+      const date = [];
       let myToggler = false;
-      console.log('start date:',startDate);
-      console.log('end date:',endDate);
 
-      console.log('blue:',blue);
-      console.log('orange:',orange);
-      console.log('green:',green);
-      console.log('date:',date);
+      //console.log(Object.keys(response)[Object.keys(response).length-1]);
+      //console.log('start',startDate);
+      //console.log(endDate);
 
 
 
-      for(let label in response){
-        //console.log(response[label].date);
-        if(response[label].date == startDate){
-          console.log(startDate, 'test togglera');
-          myToggler = true;
-        }
-        if(myToggler){
-          date.push(response[label].date);
-          blue.push(response[label].Signups);
-          orange.push(response[label].FTD);
-          green.push(response[label].Earned);
 
+      if(endDate){
+        for(let label in response){
+          //console.log(response[label].date);
 
-          if(response[label].date == endDate) myToggler = false;
+          if(response[label].date == startDate){
+            myToggler = true;
+            //console.log(startDate);
+
+          }
+          if(myToggler){
+            date.push(response[label].date);
+            blue.push(response[label].Signups);
+            orange.push(response[label].FTD);
+            green.push(response[label].Earned);
+
+            if(response[label].date == endDate) myToggler = false;
+          }
         }
       }
+      else{
+        for(let label in response){
+          if(response[label].date == startDate){
+            //console.log('test warunków');
+            date.push(response[label].date);
+            blue.push(response[label].Signups);
+            orange.push(response[label].FTD);
+            green.push(response[label].Earned);
+          }
+        }
+      }
+      //console.log(date);
 
-
-      chart = new Chart(ctx, {
+      new Chart(ctx, {
         "type": "bar",
         "data": {
             "labels": date,
@@ -99,7 +120,7 @@ initChart: function(){
                 "label": 'Earned',
                 "backgroundColor": "#71B374",
                 "borderColor": "#71B374",
-                "data": green,
+                "data": green
             }]
         }
       }

@@ -2,35 +2,36 @@ import helpFunctions from '../helpFunctions.js';
 
 
 class DatePicker {
-  constructor(){
+  constructor(enableDate){
     const thisDataPicker = this;
-    thisDataPicker.initPlugin();
+    thisDataPicker.initPlugin(enableDate);
   }
 
-  initPlugin(){
+  initPlugin(response){
+
+    const enableDate = [];
+
+
+    for(let label in response){
+      //console.log(response[label].date);
+      enableDate.push(response[label].date);
+    }
+
     const thisDataPicker = this;
     const domElem = document.querySelector('#data-picker');
 
     const pickerSettings = {
 
     mode: "range",
-    minDate: "today",
+    maxDate: "today",
     dateFormat: "Y-m-d",
-    disable: [
-        function(date) {
-            // disable every multiple of 8
-            return !(date.getDate() % 12);
-        }
-    ],
+    enable: enableDate,
     altInput: true,
     altFormat: "F j, Y",
-    maxDate: new Date,
-    minDate: '2019-08-17',
-    defaultDate: [helpFunctions.dateToStr(helpFunctions.addDays(new Date(), -10)), helpFunctions.dateToStr(new Date())]
-
+    defaultDate: [enableDate[enableDate.length-5], enableDate[enableDate.length-1]]
   }
 
-    //console.log(new Date);
+    //console.log(pickerSettings.defaultDate);
     flatpickr(domElem, pickerSettings);
   }
 }

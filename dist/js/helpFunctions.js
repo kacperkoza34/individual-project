@@ -13,7 +13,7 @@ helpFunctions.addDays = function(dateStr, days){
 };
 
 helpFunctions.separetDates = function(dates){
-    console.log(dates);
+    //console.log(dates);
     let twoDates = {};
     twoDates.startDate = dates.slice(0, 10);
     twoDates.endDate = dates.slice(14, 24);
