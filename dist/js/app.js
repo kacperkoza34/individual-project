@@ -39,20 +39,52 @@ initChart: function(){
 
       const domElem = document.querySelector('#data-picker');
 
+
+      const chart = new Chart(ctx, {
+        "type": "bar",
+        "data": {
+            "labels": ['test'],
+            "datasets": [{
+                "label": 'Signups',
+                "backgroundColor": "#8DBEC8",
+                "borderColor": "#8DBEC8",
+                "data": [0]
+            },
+            {
+                "label": 'FTD',
+                "backgroundColor": "#F29E4E",
+                "borderColor": "#F29E4E",
+                "data": [3]
+            },
+            {
+                "label": 'Earned',
+                "backgroundColor": "#71B374",
+                "borderColor": "#71B374",
+                "data": [4]
+            }]
+        }
+      }
+      );
+
+      //console.log(date);
+
       startChart.addEventListener('click', function(){
         dates = helpFunctions.separetDates(domElem.value);
-        test(response, dates.startDate, dates.endDate);
-      });
-      test(response);
+        console.log("Po kliknioecu", chart);
+        test(response, chart, dates.startDate, dates.endDate);
 
+      });
+
+        test(response, chart);
     })
 
 
     //console.log(dates);
-    function test(response,
+    function test(response, chart,
                   startDate = (response[Object.keys(response)[Object.keys(response).length-5]].date),
                   endDate = (response[Object.keys(response)[Object.keys(response).length-1]].date))
     {
+
 
       //let chart = null;
       const blue = [];
@@ -64,8 +96,6 @@ initChart: function(){
       //console.log(Object.keys(response)[Object.keys(response).length-1]);
       //console.log('start',startDate);
       //console.log(endDate);
-
-
 
 
       if(endDate){
@@ -98,33 +128,16 @@ initChart: function(){
           }
         }
       }
-      //console.log(date);
 
-      new Chart(ctx, {
-        "type": "bar",
-        "data": {
-            "labels": date,
-            "datasets": [{
-                "label": 'Signups',
-                "backgroundColor": "#8DBEC8",
-                "borderColor": "#8DBEC8",
-                "data": blue
-            },
-            {
-                "label": 'FTD',
-                "backgroundColor": "#F29E4E",
-                "borderColor": "#F29E4E",
-                "data": orange
-            },
-            {
-                "label": 'Earned',
-                "backgroundColor": "#71B374",
-                "borderColor": "#71B374",
-                "data": green
-            }]
-        }
-      }
-      );
+      console.log(chart.data);
+
+      chart.data.datasets[0].data = blue;
+      chart.data.datasets[1].data = orange;
+      chart.data.datasets[2].data = green;
+      chart.data.labels = date;
+      chart.update();
+
+
     }
 
 },
