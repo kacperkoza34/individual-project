@@ -25,6 +25,7 @@ initChart: function(){
 
   const localHost = '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3333' : '');
   const url = localHost + '/chart-data';
+  console.log('test heroku');
 
   fetch(url, { method: 'GET' })
     .then(function(response) {
