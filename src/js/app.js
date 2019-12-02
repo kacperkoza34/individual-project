@@ -129,7 +129,7 @@ initChart: function(){
         }
       }
 
-      console.log(chart.data);
+      //console.log(chart.data);
 
       chart.data.datasets[0].data = blue;
       chart.data.datasets[1].data = orange;
@@ -158,7 +158,7 @@ initPages: function(){
   const idFromHash = window.location.hash.replace('#/','');
 
   let pageMatchingHash = thisApp.pages[0].id;
-
+  console.log(pages);
   for(let page of thisApp.pages){
     if(page.id == idFromHash){
       pageMatchingHash = page.id;
