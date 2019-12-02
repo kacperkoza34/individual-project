@@ -23,7 +23,7 @@ initChart: function(){
   var ctx = document.getElementById('myChart').getContext('2d');
 
 
-  const localHost = '//' + window.location.hostname + (window.location.hostname=='localhost' ? ':3333' : '');
+  const localHost = '//' + window.location.hostname + (window.location.hostname=='protected-taiga-06834.herokuapp.com' ? ':3333' : '');
   const url = localHost + '/chart-data';
   console.log('test heroku');
 
