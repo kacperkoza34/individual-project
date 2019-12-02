@@ -22,9 +22,9 @@ initChart: function(){
 
   var ctx = document.getElementById('myChart').getContext('2d');
 
-  const localHost = '//' + window.location.hostname + (window.location.hostname=='kacper-koza-portfolio.herokuapp.com' ? ':3333' : '');
+  const localHost = '//' + window.location.hostname;
   const url = localHost + '/chart-data';
-  console.log('test heroku');
+  //console.log('test heroku');
 
   fetch(url, { method: 'GET' })
     .then(function(response) {

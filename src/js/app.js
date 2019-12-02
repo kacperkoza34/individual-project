@@ -22,7 +22,7 @@ initChart: function(){
 
   var ctx = document.getElementById('myChart').getContext('2d');
 
-  const localHost = 'http://localhost:3333';
+  const localHost = '//' + window.location.hostname;
   const url = localHost + '/chart-data';
 
   fetch(url, { method: 'GET' })
